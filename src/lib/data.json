@@ -1,0 +1,166 @@
+{
+	"sets": {
+		"1": {
+			"reps": 24
+		},
+		"2": {
+			"reps": 16
+		},
+		"3": {
+			"reps": 8
+		}
+	},
+	"weights": 10,
+	"workouts": {
+		"monday": {
+			"chest": {
+				"name": "Barbell Bench Press",
+				"video": "/videos/male-barbell-bench-press-front.mp4"
+			},
+			"back": {
+				"name": "Cable Upright Row",
+				"video": "/videos/male-cable-upright-row-side.mp4"
+			},
+			"legs": {
+				"name": "Barbell Squat",
+				"video": "/videos/male-barbell-highbar-squat-front.mp4"
+			},
+			"biceps": {
+				"name": "Barbell Curl",
+				"video": "/videos/male-barbell-curl-front.mp4"
+			},
+			"triceps": {
+				"name": "Cable Push Down",
+				"video": "/videos/male-cable-pushdown-side.mp4"
+			},
+			"delts": {
+				"name": "Dumbbell Seated Overhead Press",
+				"video": "/videos/male-dumbbell-seated-overhead-press-front.mp4"
+			},
+			"abs": {
+				"name": "Hand Plank",
+				"video": "/videos/male-bodyweight-hand-plank-side.mp4"
+			}
+		},
+		"tuesday": {
+			"chest": {
+				"name": "Push Up",
+				"video": "/videos/male-bodyweight-pushup-front.mp4"
+			},
+			"back": {
+				"name": "Pull Ups",
+				"video": "/videos/male-bodyweight-pullup-front.mp4"
+			},
+			"legs": {
+				"name": "Barbell Calf Raises",
+				"video": "/videos/male-barbell-calve-raise-front.mp4"
+			},
+			"biceps": {
+				"name": "Dumbbell Curl",
+				"video": "/videos/male-dumbbell-curl-front.mp4"
+			},
+			"triceps": {
+				"name": "Dips",
+				"video": "/videos/male-bodyweight-dips-front.mp4"
+			},
+			"delts": {
+				"name": "Barbell Upright Row",
+				"video": "/videos/male-barbell-upright-row-front.mp4"
+			},
+			"abs": {
+				"name": "Laying Leg Raises",
+				"video": "/videos/male-bodyweight-leg-raises-side.mp4"
+			}
+		},
+		"wednesday": {
+			"chest": {
+				"name": "Dumbbell Incline Bench Press",
+				"video": "/videos/male-dumbbell-incline-bench-press-front.mp4"
+			},
+			"back": {
+				"name": "Machine Pulldown",
+				"video": "/videos/male-machine-pulldown-front.mp4"
+			},
+			"legs": {
+				"name": "Dumbbell Romanian Deadlift",
+				"video": "/videos/male-dumbbell-romanian-deadlift-front.mp4"
+			},
+			"biceps": {
+				"name": "Dumbbell Hammer Curl",
+				"video": "/videos/male-dumbbell-hammer-curl-front.mp4"
+			},
+			"triceps": {
+				"name": "Dumbbell Skullcrusher",
+				"video": "/videos/male-dumbbell-skullcrusher-side.mp4"
+			},
+			"delts": {
+				"name": "Dumbbell Lateral Raise",
+				"video": "/videos/male-dumbbell-lateral-raise-side.mp4"
+			},
+			"abs": {
+				"name": "Hanging Knee Raises",
+				"video": "/videos/male-bodyweight-hanging-knee-raises-side.mp4"
+			}
+		},
+		"thursday": {
+			"chest": {
+				"name": "Dumbbell Incline Chest Flys",
+				"video": "/videos/male-dumbbell-incline-chest-flys-side.mp4"
+			},
+			"back": {
+				"name": "Machine 45 Degree Back Extension",
+				"video": "/videos/male-machine-back-extensions-side.mp4"
+			},
+			"legs": {
+				"name": "Dumbbell Calf Raise",
+				"video": "/videos/male-dumbbell-calf-raise-front.mp4"
+			},
+			"biceps": {
+				"name": "Dumbbell Incline Hammer Curl",
+				"video": "/videos/male-dumbbell-incline-hammer-curl-side.mp4"
+			},
+			"triceps": {
+				"name": "Bench Dips",
+				"video": "/videos/male-bodyweight-tricep-dips-side.mp4"
+			},
+			"delts": {
+				"name": "Dumbbell Front Raise",
+				"video": "/videos/male-dumbbell-front-raise-side.mp4"
+			},
+			"abs": {
+				"name": "Cable Standing Crunch",
+				"video": "/videos/male-cable-standing-crunch-side.mp4"
+			}
+		},
+		"friday": {
+			"chest": {
+				"name": "Chest Flys",
+				"video": "/videos/male-machine-flys-front.mp4"
+			},
+			"back": {
+				"name": "Chin Ups",
+				"video": "/videos/male-bodyweight-chinup-front.mp4"
+			},
+			"legs": {
+				"name": "Machine Leg Extension",
+				"video": "/videos/male-machine-leg-extension-front.mp4"
+			},
+			"biceps": {
+				"name": "Plate Bicep Curl",
+				"video": "/videos/male-plate-bicep-curl-side.mp4"
+			},
+			"triceps": {
+				"name": "Dumbbell Seated Overhead Tricep Extension",
+				"video": "/videos/male-dumbbell-overhead-tricep-extension-side.mp4"
+			},
+			"delts": {
+				"name": "Dumbbell Seated Rear Delt Fly",
+				"video": "/videos/male-dumbbell-seated-rear-delt-fly-side.mp4"
+			},
+			"abs": {
+				"name": "Cable Kneeling Crunch",
+				"video": "/videos/male-cable-kneeling-crunch-side.mp4"
+			}
+		}
+	}
+}
