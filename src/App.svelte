@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { workouts } from './lib/data.json';
 	const getDayName = (date = new Date(), locale = 'en-US') => {
 		return date.toLocaleDateString(locale, { weekday: 'long' });
 	};
 	const currentLevel: string = 'beginner';
+	const currentWeight: number = 10;
 
 	const maxSets: number = 3;
 	const minReps: number = 8;
@@ -24,15 +25,21 @@
 				generatedWorkoutLevels.set(key, { sets: sets, reps: reps.reverse() });
 			}
 		});
-		// return generatedWorkoutLevels;
-		console.log(generatedWorkoutLevels);
-		return new Promise<Map<string, { sets: number[]; reps: number[] }>>((resolve) => {
-			setTimeout(() => {
-				resolve(generatedWorkoutLevels);
-				console.log('delayed');
-			}, 0);
-		});
+		return generatedWorkoutLevels;
+		// console.log(generatedWorkoutLevels);
+		// return new Promise<Map<string, { sets: number[]; reps: number[] }>>((resolve) => {
+		// 	setTimeout(() => {
+		// 		resolve(generatedWorkoutLevels);
+		// 	}, 0);
+		// });
 	};
+	let page = 0;
+	let navigate = ({ next, prev }) => {
+		next ? page++ : '';
+		prev ? page-- : '';
+	};
+	let todaysWorkouts = new Map(Object.entries(workouts[getDayName().toLowerCase()]));
+	$: currentWorkout = todaysWorkouts.get(Array.from(todaysWorkouts.keys())[page]);
 </script>
 
 <div class="mx-auto flex min-h-screen max-w-sm flex-col py-4">
@@ -52,10 +59,10 @@
 				{#await generateWorkoutLevels()}
 					loading
 				{:then data}
-					<video playsinline preload="metadata" muted autoplay loop class="workout-img overflow-hidden" src="https://media.musclewiki.com/media/uploads/videos/branded/male-barbell-bench-press-front.mp4#t=0.1" />
+					<video playsinline preload="metadata" muted autoplay loop class="workout-img overflow-hidden" src={currentWorkout['video']} />
 					<div class="card-body">
-						<p class="badge-success badge font-bold">Muscle Group</p>
-						<h2 class="card-title">Workout Name</h2>
+						<p class="badge-success badge font-bold">{Array.from(todaysWorkouts.keys())[page].toUpperCase()}</p>
+						<h2 class="card-title">{currentWorkout['name']}</h2>
 						<div class="overflow-x-auto">
 							<table class="table w-full">
 								<thead>
@@ -83,16 +90,20 @@
 									</tr>
 									<tr>
 										<th>Weight</th>
-										<td>10 Kg</td>
-										<td>10 Kg</td>
-										<td>10 Kg</td>
+										{#each [...data] as level}
+											{#if level[0] === currentLevel}
+												{#each level[1].reps as rep}
+													<td>{currentWeight} Kg</td>
+												{/each}
+											{/if}
+										{/each}
 									</tr>
 								</tbody>
 							</table>
 						</div>
 						<div class="card-actions mt-4 justify-between">
-							<button class="btn-neutral btn w-2/5 font-bold">Previous</button>
-							<button class="btn-primary btn w-2/5 font-bold">Next</button>
+							<button on:click={() => navigate({ next: false, prev: true })} class={`btn-neutral btn w-2/5 font-bold ${page > 0 ? 'visible' : 'invisible'}`}>Previous</button>
+							<button on:click={() => navigate({ next: true, prev: false })} class={`btn-primary btn w-2/5 font-bold ${page + 1 === todaysWorkouts.size ? 'invisible' : 'visible'}`}>Next</button>
 						</div>
 					</div>
 				{/await}

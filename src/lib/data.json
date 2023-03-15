@@ -1,16 +1,4 @@
 {
-	"sets": {
-		"1": {
-			"reps": 24
-		},
-		"2": {
-			"reps": 16
-		},
-		"3": {
-			"reps": 8
-		}
-	},
-	"weights": 10,
 	"workouts": {
 		"monday": {
 			"chest": {
@@ -38,8 +26,8 @@
 				"video": "/videos/male-dumbbell-seated-overhead-press-front.mp4"
 			},
 			"abs": {
-				"name": "Hand Plank",
-				"video": "/videos/male-bodyweight-hand-plank-side.mp4"
+				"name": "Crunches",
+				"video": "/videos/male-bodyweight-crunch-side.mp4"
 			}
 		},
 		"tuesday": {
